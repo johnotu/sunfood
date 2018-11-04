@@ -7,6 +7,7 @@ import AppHeader from "../AppHeader";
 //import sortByDate from "./utils/sortByDate";
 //import isLocalHost from "./utils/isLocalHost";
 //import "./App.css";
+import AppHeader from "../AppFooter";
 
 
 import styled from 'styled-components'
