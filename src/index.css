@@ -45,3 +45,76 @@ button:focus, button:hover {
     border-color: #fa3b49;
     color: #fff;
 }
+.main-content {
+  min-height: calc(100vh - 259px);
+}
+.contact-form {
+  max-width:300px;
+  margin: auto;
+}
+.contact-form input, .contact-form textarea {
+font-family: 'Open Sans', sans-serif;
+font-size: 1em;
+color: #666260;
+border: 1px solid #c4beb9;
+background: #fff;
+padding: 1em;
+transition: all 0.3s ease-in-out;
+width: 100%;
+margin-bottom: 0.5em;
+}
+.contact-form input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+  text-transform: uppercase;
+font-weight: 700;
+letter-spacing: .1em;
+border: 1px solid #2d4059;
+background-color: #2d4059;
+color: #f2f2ee;
+padding: 0.832em 1.414em 0.707em;
+}
+.mail-text {
+  text-align:center;
+  margin: auto;
+  padding-bottom: 0.832em;
+}
+h1 {
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  margin-bottom: 1.45rem;
+  color: inherit;
+  font-weight: bold;
+  text-rendering: optimizeLegibility;
+  font-size: 2.25rem;
+  line-height: 1.1;
+  color: #2d4059;
+}
+h1 span, h2 span {
+  color: #ffb400;
+}
+h1 a {
+  color: #2d4059;
+}
+h2 {
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  margin-bottom: 1.45rem;
+  color: #2d4059;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-weight: bold;
+  text-rendering: optimizeLegibility;
+  font-size: 1.62671rem;
+  line-height: 1.1;
+}
