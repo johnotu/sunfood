@@ -29,7 +29,7 @@ export default class App extends Component {
             <p>Meet ...</p>
             <h1 style={{ textAlign:'center', }}><a href=""><span>Sun</span>Food<span>App</span></a></h1>
             <div style={{ maxWidth: '100%', margin: 'auto', textAlign:'center', }}>
-              <img src={food} alt="Logo" />
+              <img src={food} alt="food" width="300"/>
             </div>
       </div>
       <AppFooter />
