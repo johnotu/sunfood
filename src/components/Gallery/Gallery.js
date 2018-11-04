@@ -1,13 +1,11 @@
 import React, { Component } from "react";
 //import ContentEditable from "./components/ContentEditable";
-import AppHeader from "../AppHeader";
 //import SettingsMenu from "./components/SettingsMenu";
 //import SettingsIcon from "./components/SettingsIcon";
 //import api from "./utils/api";
 //import sortByDate from "./utils/sortByDate";
 //import isLocalHost from "./utils/isLocalHost";
 //import "./App.css";
-import AppHeader from "../AppFooter";
 
 
 import styled from 'styled-components'
