@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import ContentEditable from './components/ContentEditable'
 import AppHeader from './components/AppHeader'
+import AppFooter from './components/AppFooter'
 import SettingsMenu from './components/SettingsMenu'
 import SettingsIcon from './components/SettingsIcon'
 import api from './utils/api'
@@ -256,10 +257,7 @@ export default class App extends Component {
               onChange={this.handleTodoCheckbox}
               checked={data.completed}
             />
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 25" className="todo__icon">
-              <use xlinkHref={`${boxIcon}`} className="todo__box"></use>
-              <use xlinkHref="#todo__check" className="todo__check"></use>
-            </svg>
+
             <div className='todo-list-title'>
               <ContentEditable
                 tagName='span'
@@ -293,6 +291,7 @@ export default class App extends Component {
               <img src={food} alt="Logo" />
             </div>
       </div>
+      <AppFooter />
     <SettingsMenu
           showMenu={this.state.showMenu}
           handleModalClose={this.closeModal}
