@@ -1,43 +1,57 @@
 import React from 'react'
 import deployButton from '../../assets/deploy-to-netlify.svg'
-import logo from '../../assets/logo.svg'
+import logo from '../../assets/logo02.png'
 import github from '../../assets/github.svg'
 import styles from './AppHeader.css' // eslint-disable-line
 
 const AppHeader = (props) => {
   return (
-    <header className='app-header'>
-      <div className='app-title-wrapper'>
-        <div className='app-title-wrapper'>
-          <div className='app-left-nav'>
-            <img src={logo} className='app-logo' alt='logo' />
-            <div className='app-title-text'>
-              <h1 className='app-title'>Netlify + Fauna DB</h1>
-              <p className='app-intro'>
-                Using FaunaDB & Netlify functions
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className='deploy-button-wrapper'>
-          <a
-            target='_blank'
-            rel='noopener noreferrer'
-            href='https://app.netlify.com/start/deploy?repository=https://github.com/netlify/netlify-faunadb-example'>
-            <img src={deployButton} className='deploy-button' alt='deploy to netlify' />
+    <div>
+    <div
+      style={{
+        background: '#ea5455',
+      }}
+    >
+      <div
+        style={{
+          margin: '0 auto',
+          maxWidth: 960,
+          height: '100%',
+        }}
+      >
+        <h1 style={{ margin: 0 }}>
+          <a href="/"
+            style={{
+              color: 'white',
+              textDecoration: 'none',
+            }}
+          >
+            <img src={logo} alt="Logo" title="SunFoodApp" className="logo-img" />
           </a>
-          <div className='view-src'>
-            <a
-              target='_blank'
-              rel='noopener noreferrer'
-              href='https://github.com/netlify/netlify-faunadb-example'>
-              <img className='github-icon' src={github} alt='view repo on github' />
-              View the source Luke
-            </a>
-          </div>
-        </div>
+        </h1>
       </div>
-    </header>
+    </div>
+    <div
+      style={{
+        background: '#2d4059',
+      }}
+    >
+      <div
+        style={{
+          margin: '0 auto',
+          maxWidth: 960,
+          height: '100%',
+        }}
+      >
+        <ul className="top-menu">
+          <li><a href="/">Home</a></li>
+          <li><a href="/">Search Food</a></li>
+          <li><a href="/gallery">View Food Collections</a></li>
+          <li><a href="/contact">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
   )
 }
 
