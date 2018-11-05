@@ -47,5 +47,8 @@ const Main = () => (
   <Switch>
     {/* <Route path='/' component={Home}></Route> */}
     <Route exact path='/gallery' component={Gallery}></Route>
+    <Route path="/main/" exact component={MainPage} />
+      <Route path="/about/" component={About} />
+      <Route path="/contact/" component={Contact} />
   </Switch>
 );
