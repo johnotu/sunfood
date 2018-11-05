@@ -14,3 +14,9 @@ Our goal is to get acquainted with the above mentioned API, to determine the pos
 * [Olha Babochkina](https://github.com/oshka)
 * [Alberto Escala](https://github.com/albertoescala)
 * [John Otu](https://github.com/johnotu)
+
+### To run locally
+* Clone the repo `git clone git@github.com:johnotu/sunfood.git`
+* Install dependencies `npm install`
+* Save FAUNADB_SECRET environment variable (Windows: `set FAUNADB_SECRET=secret` Linux: `export FAUNADB_SECRET=secret`)
+* Start all the servers by running `npm start`
