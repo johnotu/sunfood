@@ -4,7 +4,7 @@ import logo from '../../assets/logo02.png'
 import github from '../../assets/github.svg'
 import styles from './AppHeader.css' // eslint-disable-line
 import Gallery from '../Gallery/Gallery'
-import Home from '../Home/Home'
+//import Home from '../Home/Home'
 
 import { NavLink, Switch, Route } from 'react-router-dom'
 
