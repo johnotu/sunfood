@@ -32,7 +32,7 @@ const Contact = (props) => {
       <input type="email" name="_replyto" placeholder="Your email" />
       <input type="text" name="subject"  placeholder="Subject"/>
       <textarea placeholder="Delights, comments, restaurant"> </textarea>
-      <input type="hidden" name="_next" value="http://localhost:8000/contact" />
+      <input type="hidden" name="_next" value="https://sunfood-test.netlify.com/contact" />
       <input type="submit" value="Send" />
     </form> 
     </div>
