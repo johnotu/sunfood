@@ -1,19 +1,10 @@
 import React, { Component } from "react";
-//import ContentEditable from "./components/ContentEditable";
-//import SettingsMenu from "./components/SettingsMenu";
-//import SettingsIcon from "./components/SettingsIcon";
-//import api from "./utils/api";
-//import sortByDate from "./utils/sortByDate";
-//import isLocalHost from "./utils/isLocalHost";
-//import "./App.css";
+import api from "../../utils/api";
+import isLocalHost from "../../utils/isLocalHost";
 
 
 import styled from 'styled-components'
 import FoodCard from '../foodCard'
-//import Layout from '../components/layout'
-import arrozConPollo from '../../assets/images/arroz-pollo.png'
-import ceviche from '../../assets/images/ceviche.jpg'
-import papaALaHuancaina from '../../assets/images/papa-huancaina.jpg'
 
 const Container = styled.div`
   background-color: #f2f2f2;
@@ -27,28 +18,40 @@ const Container = styled.div`
 
 export default class Gallery extends Component {
     state = {
-      cardWidth: 200
+      cardWidth: 200,
+      food: []
     }
+  componentDidMount() {
+    // Fetch all todos
+    api.readAll().then((food) => {
+      if (food.message === 'unauthorized') {
+        if (isLocalHost()) {
+          alert('FaunaDB key is not unauthorized. Make sure you set it in terminal session where you ran `npm start`. Visit http://bit.ly/set-fauna-key for more info')
+        } else {
+          alert('FaunaDB key is not unauthorized. Verify the key `FAUNADB_SECRET` set in Netlify enviroment variables is correct')
+        }
+        return false
+      }
+
+      console.log('all food', food)
+      this.setState({
+        food: food
+      })
+    })
+  }
+  
+  
     render() {
-        const { cardWidth } = this.state
+      const { cardWidth, food } = this.state
+      console.log('*** foods: ', food)
     return (
       <div className="app">
         <Container>
-          <FoodCard size={cardWidth} img={papaALaHuancaina} text="Papa a la huancaina" />
-          <FoodCard size={cardWidth} img={ceviche} text="Ceviche" />
-          <FoodCard size={cardWidth} img={papaALaHuancaina} text="Papa a la huancaina" />
-          <FoodCard size={cardWidth} img={arrozConPollo} text="Arroz con pollo" />
-          <FoodCard size={cardWidth} img={ceviche} text="Ceviche" />
-          <FoodCard size={cardWidth} img={papaALaHuancaina} text="Papa a la huancaina" />
-          <FoodCard size={cardWidth} img={arrozConPollo} text="Arroz con pollo" />
-          <FoodCard size={cardWidth} img={ceviche} text="Ceviche" />
-          <FoodCard size={cardWidth} img={papaALaHuancaina} text="Papa a la huancaina" />
-          <FoodCard size={cardWidth} img={arrozConPollo} text="Arroz con pollo" />
-          <FoodCard size={cardWidth} img={ceviche} text="Ceviche" />
-          <FoodCard size={cardWidth} img={papaALaHuancaina} text="Papa a la huancaina" />
-          <FoodCard size={cardWidth} img={arrozConPollo} text="Arroz con pollo" />
-          <FoodCard size={cardWidth} img={ceviche} text="Ceviche" />
-          <FoodCard size={cardWidth} img={ceviche} text="Ceviche" />
+          {
+            food.map((item, i) => {
+              return <FoodCard key={i} size={cardWidth} img={item.data.image} text={item.data.name} />;
+            })
+          }
         </Container>
         
       </div>
