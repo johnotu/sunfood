@@ -8,8 +8,7 @@ import AppFooter from './components/AppFooter'
 const Contact = (props) => {
   return (
     <AppHeader />
-    <div
-    style={{
+    <div style={{
       background: '#2d4059',
     }}
   >
