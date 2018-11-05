@@ -23,13 +23,13 @@ const AppHeader = (props) => {
         <div style={{ margin: "0 auto", maxWidth: 960, height: "100%" }}>
           <ul className="top-menu">
             <li>
-              <NavLink to="/">Home</NavLink>
+            <a href="/main">Home</a>
             </li>
             <li>
               <a href="/">Search Food</a>
             </li>
             <li>
-              <NavLink to="/gallery">View Food Collections</NavLink>
+              <a href="/gallery">View Food Collections</a>
             </li>
             <li>
               <a href="/contact">Contact Us</a>
