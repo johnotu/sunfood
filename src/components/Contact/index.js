@@ -5,7 +5,14 @@ import styles from './Contact.css' // eslint-disable-line
 
 const Contact = (props) => {
   return (
-    <div>
+    <div
+    style={{
+      margin: '0 auto',
+      maxWidth: 960,
+      padding: '1.45rem',
+    }} 
+     className="main-content"
+  >
     <h1>Get In Touch</h1>
     <p>Our contact form was made using Formspree</p>
     <p>Contact us if you:</p>

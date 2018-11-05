@@ -4,7 +4,14 @@ import food from '../../assets/food.png'
 
 const MainPage = (props) => {
   return (
-    <div>
+    <div
+    style={{
+      margin: '0 auto',
+      maxWidth: 960,
+      padding: '1.45rem',
+    }} 
+     className="main-content"
+  >
     <h2><span>Sun</span>Code<span>Flower</span> presents..</h2>
     <p>We all love tasty food and eat well. But sometimes we lack the imagination or words to describe what we want for dinner.</p>
     <p>We present you a mega application using the latest technologies that can solve all the above problems.</p>

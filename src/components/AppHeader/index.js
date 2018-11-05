@@ -4,6 +4,8 @@ import logo from '../../assets/logo02.png'
 import github from '../../assets/github.svg'
 import styles from './AppHeader.css' // eslint-disable-line
 import Gallery from '../Gallery/Gallery'
+import Contact from '../Contact'
+import MainPage from '../MainPage'
 //import Home from '../Home/Home'
 
 import { NavLink, Switch, Route } from 'react-router-dom'
@@ -23,16 +25,16 @@ const AppHeader = (props) => {
         <div style={{ margin: "0 auto", maxWidth: 960, height: "100%" }}>
           <ul className="top-menu">
             <li>
-            <a href="/main">Home</a>
+            <NavLink to="/main">Home</NavLink>
             </li>
             <li>
-              <a href="/">Search Food</a>
+              <NavLink to="/">Search Food</NavLink>
             </li>
             <li>
-              <a href="/gallery">View Food Collections</a>
+              <NavLink to="/gallery">View Food Collections</NavLink>
             </li>
             <li>
-              <a href="/contact">Contact Us</a>
+              <NavLink to="/contact">Contact Us</NavLink>
             </li>
           </ul>
         </div>
@@ -48,7 +50,6 @@ const Main = () => (
     {/* <Route path='/' component={Home}></Route> */}
     <Route exact path='/gallery' component={Gallery}></Route>
     <Route path="/main/" exact component={MainPage} />
-      <Route path="/about/" component={About} />
       <Route path="/contact/" component={Contact} />
   </Switch>
 );
