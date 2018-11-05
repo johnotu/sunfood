@@ -1,12 +1,6 @@
 import React, { Component } from 'react'
-import ContentEditable from './components/ContentEditable'
 import AppHeader from './components/AppHeader'
 import AppFooter from './components/AppFooter'
-import SettingsMenu from './components/SettingsMenu'
-import SettingsIcon from './components/SettingsIcon'
-import api from './utils/api'
-import sortByDate from './utils/sortByDate'
-import isLocalHost from './utils/isLocalHost'
 import './App.css'
 import food from './assets/food.png'
 
