@@ -1,8 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
-import App from './App'
-import AppHeader from './components/AppHeader'
-import AppFooter from './components/AppFooter'
+import Contact from './components/Contact'
 
-ReactDOM.render(<Contact />, document.getElementById('root'))
+import { BrowserRouter } from 'react-router-dom'
+
+ReactDOM.render(<BrowserRouter><Contact /></ BrowserRouter>, document.getElementById('root'))
